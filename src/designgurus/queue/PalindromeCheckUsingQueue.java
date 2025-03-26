@@ -1,4 +1,4 @@
-package designgurus;
+package designgurus.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
