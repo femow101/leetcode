@@ -10,7 +10,6 @@ package designgurus.dynamicprogramming;
  */
 public class Knapsack {
     public int solveKnapsack(int[] profits, int[] weights, int capacity) {
-        int maxProfit = 0;
         int len = profits.length;
         int[][] profitMatrix = new int[len][capacity];
 
@@ -39,10 +38,9 @@ public class Knapsack {
                 }
 
                 profitMatrix[i][j] = currentProfit;
-                maxProfit = Math.max(currentProfit, maxProfit);
             }
         }
 
-        return maxProfit;
+        return profitMatrix[len - 1][capacity - 1];
     }
 }
